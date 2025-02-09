@@ -41,6 +41,11 @@ cd ros1_kinetic_docker`
 * Run the Container `docker run -it --rm ros1_kinetic`
 * Start ROS `source /opt/ros/kinetic/setup.bash`
            `roscore`
+* Split you Terminal and input `docker ps`
+* This will give you the docker containers that are running right now.
+* Copy the container ID and input the following `docker exec -it <container_name_or_id> bash`
+* Now you have the access to you docker in you terminal. *This must be done for every new terminal that you open.*
+
 
 ## Demo
 Here is what the project can do and what are the results.
