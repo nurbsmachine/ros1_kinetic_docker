@@ -1,4 +1,4 @@
-# Group Project Repository Submission Template 
+# This repository is for ros1 kinetic docker used for the IAAC E-Club activities. 
 ## Index
   - [Overview](#overview) 
   - [Getting Started](#getting-started)
@@ -10,9 +10,9 @@
   - [Deployment](#deployment)
   - [Used or Referenced Projects](Used-or-Referenced-Projects)
 -->
-## MRAC0X(XX/XX): ClassName XX - Student Project Name
+## IAAC E-Club - Njord Autonomous Ship project
 <!--Write a few sentences of academic context and project description -->  
-This project aims to demonstrate a fantastic application using fascinating technologies, developed within the scope of the best class ever.   
+This project aims to demonstrate the software for an autonomous boat building challenge using ROS, developed within the scope of the E-Club  
 ## Overview
 <!-- Write Overview about this project -->
 The project's justification, state-of-the-art, and inspiration live in this section.
@@ -21,43 +21,31 @@ The project's justification, state-of-the-art, and inspiration live in this sect
 
 ### Prerequisites
 Ensure that you fulfill the following criteria to replicate this project.
-* Ubuntu LTS 20.04 <
+* Ubuntu LTS 20.04 
 * Python 3.7 <
 * Docker
 
 ### Depencies
 The project's dependencies include:
-* Numpy - for matrix manipulation
-* OpenCV - for image processing
 * ROS - for interfacing with the robot
 
-The dependencies are satisfied using the following sources:
 
-```bash
-# ROS Noetic and core dependencies
-wget -c https://raw.githubusercontent.com/qboticslabs/ros_install_noetic/master/ros_install_noetic.sh && chmod +x ./ros_install_noetic.sh && ./ros_install_noetic.sh
-# install numpy
-pip3 install numpy setuptools
-```
 
-### Installing
-A step by step series of examples that tell you how to get a development 
-env running
 
-```bash
-cd ~/catkin_ws/src
-git submodule init
-git submodule update
-cd ../
-rosdep install --from-paths src --ignore-src -r -y
-catkin_make -DCMAKE_BUILD_TYPE=Release
-source ./devel/setup.bash
-```
+
 ### Deployment
-Add additional notes about how to deploy this on a live system
-* Run the application with `.docker/run_user_nvidia.sh`
-* Ensure that you are running the indicate command `sudo chmod -R <user_name> \dev_ws` for permitions
-* Run `terminator`
+How to deploy this on a live system
+* Clone the Repo `git clone https://github.com/YOUR_USERNAME/ros1_kinetic_docker.git
+cd ros1_kinetic_docker`
+* Build the Docker image `docker build -t ros1_kinetic .` 
+* Run the Container `docker run -it --rm ros1_kinetic`
+* Start ROS `source /opt/ros/kinetic/setup.bash`
+           `roscore`
+* Split you Terminal and input `docker ps`
+* This will give you the docker containers that are running right now.
+* Copy the container ID and input the following `docker exec -it <container_name_or_id> bash`
+* Now you have the access to you docker in you terminal. *This must be done for every new terminal that you open.*
+
 
 ## Demo
 Here is what the project can do and what are the results.
@@ -68,10 +56,10 @@ The project can be launched with the following command:
 This opens up `rviz` and shows the robot moving around
 
 ## Authors
-  - [Name](insert linkedin/webpage link) - role
+  - Arun_Prasad AKA NurbsMachine https://www.linkedin.com/in/architectarunprasad/ - Software System Design
+  - Geetham Pasumarthy AKA AlphaLord (insert linkedin/webpage link) - Software System Design
 
 ## References
-- [K. Albee et al., “A robust observation, planning, and control pipeline for autonomous rendezvous with tumbling targets,” Frontiers in Robotics and AI, vol. 8, p. 234, 2021, doi: 10.3389/frobt.2021.641338.](https://www.frontiersin.org/articles/10.3389/frobt.2021.641338/full)
 
 ## Credits
   - [Name](insert linkedin/webpage link) - role
